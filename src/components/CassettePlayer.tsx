@@ -35,10 +35,10 @@ const CassettePlayer = () => {
             duration: "3:38"
         },
         {
-            title: "Brand Identity",
-            artist: "Design Studio",
-            url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
-            duration: "4:05"
+            title: "Cheri Cheri Lady",
+            artist: "Modern Talking",
+            url: "https://open.spotify.com/track/2aEuA8PSqLa17Y4hKPj5rr?si=2817a6640fe14d19",
+            duration: "3:46"
         }
     ];
 
