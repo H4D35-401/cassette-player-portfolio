@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download, Palette, Monitor, Smartphone } from 'lucide-react';
 import LiquidGlassNavbar from '../components/LiquidGlassNavbar';
+import RetroNavbar from '../components/RetroNavbar';
 import AnimatedButton from '../components/AnimatedButton';
 import CassettePlayer from '../components/CassettePlayer';
 import ParallaxSection from '../components/ParallaxSection';
@@ -77,6 +78,7 @@ const Index = ()=>{
     }}/>
 
       <LiquidGlassNavbar data-spec-id="rIkLeOfTezy7HI54"/>
+        <RetroNavbar />
 
       {}
       <section id="home" className="min-h-screen flex items-center justify-center relative pt-16" data-spec-id="SFGdmcapIrqyRXhr">
