@@ -149,7 +149,7 @@ const CassettePlayer = () => {
                 }}
             >
       {}
-      <div className="relative bg-gradient-to-br from-amber-100 via-orange-200 to-red-200 rounded-2xl p-6 shadow-2xl border-4 border-amber-800/30" data-spec-id="wAnM4pw3JG5rHjIU">
+      <div className="relative bg-gradient-to-br from-amber-100 via-orange-200 to-red-200 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 rounded-2xl p-6 shadow-2xl border-4 border-amber-800/30 dark:border-gray-600/30" data-spec-id="wAnM4pw3JG5rHjIU">
         
         {}
         <div className="bg-black/80 rounded-lg p-4 mb-4" data-spec-id="FKq1QnOolqDHEGCa">
@@ -242,13 +242,13 @@ const CassettePlayer = () => {
           <div className="flex items-center space-x-2" data-spec-id="IVyu5mrp5UgkCQTT">
             <motion.button 
                 onClick={toggleMute}
-                className="text-amber-800 hover:text-amber-600 transition-colors"
+                className="text-amber-800 dark:text-amber-400 hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
             >
               {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
             </motion.button>
-            <div className="relative w-16 h-1 bg-amber-300 rounded-full" data-spec-id="85gurCA5JqIyitSa">
+            <div className="relative w-16 h-1 bg-amber-300 dark:bg-amber-600 rounded-full" data-spec-id="85gurCA5JqIyitSa">
               <input
                 type="range"
                 min="0"
@@ -259,13 +259,13 @@ const CassettePlayer = () => {
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
               />
               <div 
-                className="h-full bg-amber-600 rounded-full transition-all duration-200" 
+                className="h-full bg-amber-600 dark:bg-amber-400 rounded-full transition-all duration-200" 
                 style={{ width: `${(isMuted ? 0 : volume) * 100}%` }}
               />
             </div>
           </div>
           
-          <div className="text-xs text-amber-800 font-mono" data-spec-id="UTFT200QCJumwhIw">
+          <div className="text-xs text-amber-800 dark:text-amber-400 font-mono" data-spec-id="UTFT200QCJumwhIw">
             {String(currentTrack + 1).padStart(2, '0')}/{String(tracks.length).padStart(2, '0')}
           </div>
         </div>
@@ -273,8 +273,8 @@ const CassettePlayer = () => {
         {}
         <div className="absolute top-2 left-2 w-3 h-3 bg-red-500 rounded-full shadow-inner" data-spec-id="qJMuYX6CfU9l47JP"/>
         <div className="absolute top-2 right-2 w-2 h-2 bg-amber-600 rounded-full" data-spec-id="YpcZlKmmwl9ZEoNf"/>
-        <div className="absolute bottom-2 left-2 text-xs text-amber-800/60 font-mono" data-spec-id="W5infMIL8yYKLtzU">RETRO</div>
-        <div className="absolute bottom-2 right-2 text-xs text-amber-800/60 font-mono" data-spec-id="SinpkihyOfXzPtWq">DESIGN</div>
+        <div className="absolute bottom-2 left-2 text-xs text-amber-800/60 dark:text-amber-400/60 font-mono" data-spec-id="W5infMIL8yYKLtzU">RETRO</div>
+        <div className="absolute bottom-2 right-2 text-xs text-amber-800/60 dark:text-amber-400/60 font-mono" data-spec-id="SinpkihyOfXzPtWq">DESIGN</div>
       </div>
 
       {}
