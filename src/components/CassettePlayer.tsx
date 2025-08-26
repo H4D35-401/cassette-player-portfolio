@@ -1,7 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 import { Play, Pause, SkipForward, SkipBack, Volume2, VolumeX } from 'lucide-react';
-import AnimatedButton from './AnimatedButton';
+import thrillerAudio from './audio/SpotiDownloader.com - Thriller - Michael Jackson.mp3';
+import mariahAudio from './audio/SpotiDownloader.com - Here We Go Around Again - 1990 - Mariah Carey.mp3';
+import begginAudio from './audio/Madcon - Beggin.mp3';
+import cheriAudio from './audio/SpotiDownloader.com - Cheri Cheri Lady - Modern Talking.mp3';
 
 const CassettePlayer = () => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -17,27 +21,27 @@ const CassettePlayer = () => {
     
     const tracks = [
         {
-            title: "Thriller ",
+            title: "Thriller",
             artist: "Michael Jackson",
-            url: "https://open.spotify.com/track/3S2R0EVwBSAVMd5UMgKTL0?si=7fbb8e8c73fc4cd6",
+            url: thrillerAudio,
             duration: "5:57"
         },
         {
-            title: "Here we go around again", 
+            title: "Here We Go Around Again",
             artist: "Mariah Carey",
-            url: "https://open.spotify.com/track/10A03OyuWyErmqSxsMGX96?si=92b4819b83304232",
+            url: mariahAudio,
             duration: "3:55"
         },
         {
             title: "Beggin - Original Mix",
             artist: "Madcon",
-            url: "https://open.spotify.com/track/7eXrGBrl1mBKhxlWX0IoOQ?si=93e7f05a5cb3452e", 
+            url: begginAudio, 
             duration: "3:38"
         },
         {
             title: "Cheri Cheri Lady",
             artist: "Modern Talking",
-            url: "https://open.spotify.com/track/2aEuA8PSqLa17Y4hKPj5rr?si=2817a6640fe14d19",
+            url: cheriAudio,
             duration: "3:46"
         }
     ];
@@ -132,16 +136,16 @@ const CassettePlayer = () => {
                 data-spec-id="cassette-player" 
                 className="relative w-full max-w-md mx-auto" 
                 initial={{
-                    scale: 0.8,
-                    opacity: 0
+        scale: 0.8,
+        opacity: 0
                 }} 
                 animate={{
-                    scale: 1,
-                    opacity: 1
+        scale: 1,
+        opacity: 1
                 }} 
                 transition={{
-                    duration: 0.8,
-                    ease: "easeOut"
+        duration: 0.8,
+        ease: "easeOut"
                 }}
             >
       {}
@@ -177,14 +181,14 @@ const CassettePlayer = () => {
               {isLoading ? "LOADING..." : "NOW PLAYING"}
             </div>
             <motion.div className="text-green-300 font-bold text-lg" key={currentTrack} initial={{
-                opacity: 0,
-                y: 10
-            }} animate={{
-                opacity: 1,
-                y: 0
-            }} transition={{
-                duration: 0.3
-            }}>
+        opacity: 0,
+        y: 10
+    }} animate={{
+        opacity: 1,
+        y: 0
+    }} transition={{
+        duration: 0.3
+    }}>
               {tracks[currentTrack].title}
             </motion.div>
             <div className="text-green-400 font-mono text-xs mt-1">
@@ -279,6 +283,34 @@ const CassettePlayer = () => {
       <div className="absolute bottom-4 left-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner" data-spec-id="jvIEBUMWumXicBRm"/>
       <div className="absolute bottom-4 right-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner" data-spec-id="uOV2uReSS7cKcSMa"/>
             </motion.div>
+
+            {/* Global playing indicator - bottom right corner (rendered via portal) */}
+            {typeof document !== 'undefined' && createPortal(
+              <div className="fixed bottom-5 right-5 z-[9999] pointer-events-none">
+                <div className="relative">
+                  {/* Base coin-sized dot */}
+                  <div className={`w-8 h-8 rounded-full shadow-lg backdrop-blur-sm flex items-center justify-center ${isPlaying ? 'bg-green-500' : 'bg-gray-400'}`}>
+                    <div className="w-2.5 h-2.5 bg-white/80 rounded-full"/>
+                  </div>
+                  {/* Pulsing ring when playing */}
+                  {isPlaying && (
+                    <>
+                      <motion.span
+                        className="absolute inset-0 -m-1 rounded-full border-2 border-green-400"
+                        animate={{ scale: [1, 1.6], opacity: [0.7, 0] }}
+                        transition={{ duration: 1.2, repeat: Infinity, ease: 'easeOut' }}
+                      />
+                      <motion.span
+                        className="absolute inset-0 -m-2 rounded-full border-2 border-green-300"
+                        animate={{ scale: [1, 1.9], opacity: [0.5, 0] }}
+                        transition={{ duration: 1.6, repeat: Infinity, ease: 'easeOut', delay: 0.2 }}
+                      />
+                    </>
+                  )}
+                </div>
+              </div>,
+              document.body
+            )}
         </>
     );
 };
