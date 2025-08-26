@@ -1,4 +1,6 @@
 # Cassette Player – Retro Portfolio Website
+## Preview
+[Preview it](https://cassette-player-portfolio.netlify.app/)
 
 A retro-styled portfolio site featuring a liquid-glass navbar, animated gradient typing effect, a cassette player UI with real audio playback, and subtle parallax/interaction details.
 
