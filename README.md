@@ -79,7 +79,7 @@ npm run build
 ```
 
 ## 📄 License
-This project is available under your preferred license. If open-sourcing, consider MIT.
+MIT 
 
 ## 🙌 Acknowledgements
 - Framer Motion for animations
