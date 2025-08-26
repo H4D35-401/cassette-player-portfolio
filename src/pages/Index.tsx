@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download, Palette, Monitor, Smartphone } from 'lucide-react';
 import LiquidGlassNavbar from '../components/LiquidGlassNavbar';
 import RetroNavbar from '../components/RetroNavbar';
+import DarkModeToggle from '../components/DarkModeToggle';
 import AnimatedButton from '../components/AnimatedButton';
 import CassettePlayer from '../components/CassettePlayer';
 import ParallaxSection from '../components/ParallaxSection';
@@ -66,7 +67,7 @@ const Index = ()=>{
             link: "#"
         }
     ];
-    return (<div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-100 to-red-200 overflow-x-hidden" data-spec-id="nTn4NA9jaghkVIqd">
+    return (<div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-100 to-red-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-x-hidden transition-colors duration-300" data-spec-id="nTn4NA9jaghkVIqd">
       {}
       <motion.div className="fixed w-4 h-4 bg-orange-500/30 rounded-full pointer-events-none z-40 mix-blend-multiply" animate={{
         x: mousePosition.x - 8,
@@ -78,7 +79,8 @@ const Index = ()=>{
     }}/>
 
       <LiquidGlassNavbar data-spec-id="rIkLeOfTezy7HI54"/>
-        <RetroNavbar />
+      <RetroNavbar />
+      <DarkModeToggle />
 
       {}
       <section id="home" className="min-h-screen flex items-center justify-center relative pt-16" data-spec-id="SFGdmcapIrqyRXhr">
@@ -97,10 +99,10 @@ const Index = ()=>{
               <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-amber-600 via-orange-600 to-red-700 bg-clip-text text-transparent mb-4" data-spec-id="WAyGbhnqobctSIli">
                 RETRO
               </h1>
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6" data-spec-id="bP397R0rrm6hR7KM">
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-6" data-spec-id="bP397R0rrm6hR7KM">
                 Graphic Designer
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed" data-spec-id="DEswdrez263VtzCR">
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed" data-spec-id="DEswdrez263VtzCR">
                 Bringing vintage aesthetics to modern design. Specialized in creating nostalgic visual experiences 
                 that resonate with contemporary audiences.
               </p>
@@ -201,15 +203,15 @@ const Index = ()=>{
     }} viewport={{
         once: true
     }}>
-                <h3 className="text-3xl font-bold text-gray-800 mb-6" data-spec-id="xBKHfo6IwC6RYJ3J">
+                <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6" data-spec-id="xBKHfo6IwC6RYJ3J">
                   Where Analog Meets Digital
                 </h3>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6" data-spec-id="33rdlltH0vbwu3eI">
+                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6" data-spec-id="33rdlltH0vbwu3eI">
                   I'm a passionate graphic designer who believes that the warmth and character of vintage design 
                   can breathe life into modern digital experiences. My work spans across brand identity, 
                   packaging design, and digital interfaces.
                 </p>
-                <p className="text-gray-600 text-lg leading-relaxed mb-8" data-spec-id="qfZiLzHp0WWRIXlu">
+                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8" data-spec-id="qfZiLzHp0WWRIXlu">
                   Inspired by the golden age of analog technology—especially cassette tapes, vinyl records, 
                   and retro electronics—I create designs that evoke nostalgia while solving contemporary design challenges.
                 </p>
@@ -219,22 +221,22 @@ const Index = ()=>{
                     <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-3" data-spec-id="KzhUjPW5jI04PwT7">
                       <Palette className="text-white" size={24} data-spec-id="Rk5pk8Q9kXX39RFe"/>
                     </div>
-                    <h4 className="font-bold text-gray-800 mb-1" data-spec-id="pVz0Z4IZqo7PLIDT">50+</h4>
-                    <p className="text-sm text-gray-600" data-spec-id="eb06PuhHvmHIwyWu">Projects</p>
+                    <h4 className="font-bold text-gray-800 dark:text-gray-100 mb-1" data-spec-id="pVz0Z4IZqo7PLIDT">50+</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300" data-spec-id="eb06PuhHvmHIwyWu">Projects</p>
                   </div>
                   <div className="text-center" data-spec-id="fmkGFYhok08cm137">
                     <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-3" data-spec-id="7YZRIjvFxxsUfU8d">
                       <Monitor className="text-white" size={24} data-spec-id="8tDXIEmUIWX01zS9"/>
                     </div>
-                    <h4 className="font-bold text-gray-800 mb-1" data-spec-id="KjydTMChAGvHphJ6">3+</h4>
-                    <p className="text-sm text-gray-600" data-spec-id="37nF96aRzYOj8g9s">Years</p>
+                    <h4 className="font-bold text-gray-800 dark:text-gray-100 mb-1" data-spec-id="KjydTMChAGvHphJ6">3+</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300" data-spec-id="37nF96aRzYOj8g9s">Years</p>
                   </div>
                   <div className="text-center" data-spec-id="m7I7wQB07VhM991C">
                     <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-3" data-spec-id="0KMbyqoHzPieq4LL">
                       <Smartphone className="text-white" size={24} data-spec-id="W1xCfVMezq7g2Lz3"/>
                     </div>
-                    <h4 className="font-bold text-gray-800 mb-1" data-spec-id="T7Nn7S1lDcR7a9cr">25+</h4>
-                    <p className="text-sm text-gray-600" data-spec-id="YrYUXWY7hdnY9Awa">Clients</p>
+                    <h4 className="font-bold text-gray-800 dark:text-gray-100 mb-1" data-spec-id="T7Nn7S1lDcR7a9cr">25+</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300" data-spec-id="YrYUXWY7hdnY9Awa">Clients</p>
                   </div>
                 </div>
               </motion.div>
@@ -262,7 +264,7 @@ const Index = ()=>{
       </section>
 
       {}
-      <section id="portfolio" className="py-20 bg-gradient-to-br from-orange-50 via-red-50 to-amber-100" data-spec-id="33wKos8nzTqMPNSm">
+      <section id="portfolio" className="py-20 bg-gradient-to-br from-orange-50 via-red-50 to-amber-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800" data-spec-id="33wKos8nzTqMPNSm">
         <ParallaxSection speed={0.2} data-spec-id="07iwLRXIAlRRl0aA">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-spec-id="OZWSjsm1FtSEaQr7">
             <motion.div data-spec-id="portfolio-title" className="text-center mb-16" initial={{
@@ -279,7 +281,7 @@ const Index = ()=>{
               <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 to-red-700 bg-clip-text text-transparent mb-4" data-spec-id="wj0nh3ULQTp0Zneb">
                 Portfolio
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto" data-spec-id="jlDATXBFbHhiY6pY">
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-spec-id="jlDATXBFbHhiY6pY">
                 A collection of projects that blend vintage aesthetics with modern functionality
               </p>
             </motion.div>
@@ -330,7 +332,7 @@ const Index = ()=>{
               <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 to-red-700 bg-clip-text text-transparent mb-8" data-spec-id="MdHc7PgcLTV0aLuG">
                 Let's Create Together
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12" data-spec-id="nbA6LTP4LqWVaog5">
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12" data-spec-id="nbA6LTP4LqWVaog5">
                 Ready to bring some vintage charm to your next project? Let's discuss how we can create something amazing together.
               </p>
             </motion.div>
@@ -382,7 +384,7 @@ const Index = ()=>{
               </a>
             </motion.div>
 
-            <motion.div data-spec-id="contact-footer" className="text-gray-500 text-sm" initial={{
+            <motion.div data-spec-id="contact-footer" className="text-gray-500 dark:text-gray-400 text-sm" initial={{
         opacity: 0
     }} whileInView={{
         opacity: 1
