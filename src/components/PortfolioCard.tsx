@@ -9,7 +9,7 @@ interface PortfolioCardProps {
     dataSpecId?: string;
 }
 const PortfolioCard = ({ title, description, image, category, link, dataSpecId }: PortfolioCardProps)=>{
-    return (<motion.div data-spec-id={dataSpecId} className="group relative bg-gradient-to-br from-amber-50 via-orange-100 to-red-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-amber-200/50" initial={{
+    return (<motion.div data-spec-id={dataSpecId} className="group relative bg-gradient-to-br from-amber-50 via-orange-100 to-red-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-amber-200/50 dark:border-gray-600/50" initial={{
         opacity: 0,
         y: 50
     }} animate={{
@@ -62,10 +62,10 @@ const PortfolioCard = ({ title, description, image, category, link, dataSpecId }
 
       {}
       <div className="p-6" data-spec-id="U8JUcZ3i7GGyjACX">
-        <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors" data-spec-id="7wOZykB38DbP8WjI">
+        <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors" data-spec-id="7wOZykB38DbP8WjI">
           {title}
         </h3>
-        <p className="text-gray-600 text-sm leading-relaxed" data-spec-id="rMlJTZNDYY3eL0Lm">
+        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-spec-id="rMlJTZNDYY3eL0Lm">
           {description}
         </p>
       </div>
