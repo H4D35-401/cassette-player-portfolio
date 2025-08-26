@@ -345,18 +345,39 @@ const Index = ()=>{
     }} viewport={{
         once: true
     }}>
-              <AnimatedButton variant="cassette" dataSpecId="email-btn" data-spec-id="FQErxFye9JjBNFDj">
-                <Mail size={20} data-spec-id="STFPjNsnugbzbIdG"/>
-                Send Email
-              </AnimatedButton>
-              <AnimatedButton variant="secondary" dataSpecId="linkedin-btn" data-spec-id="vLzY57kfCvLnzAq6">
-                <Linkedin size={20} data-spec-id="CKEaXSOxiPujBWpK"/>
-                LinkedIn
-              </AnimatedButton>
-              <AnimatedButton variant="secondary" dataSpecId="github-btn" data-spec-id="QUg7q518BjGxUatL">
-                <Github size={20} data-spec-id="KcGL6bnwyR1J1KVy"/>
-                GitHub
-              </AnimatedButton>
+              <a 
+                href="mailto:adityanakhate262007@gmail.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <AnimatedButton variant="cassette" dataSpecId="email-btn" data-spec-id="FQErxFye9JjBNFDj">
+                  <Mail size={20} data-spec-id="STFPjNsnugbzbIdG"/>
+                  Send Email
+                </AnimatedButton>
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/aditya-nakhate-66197331a/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <AnimatedButton variant="secondary" dataSpecId="linkedin-btn" data-spec-id="vLzY57kfCvLnzAq6">
+                  <Linkedin size={20} data-spec-id="CKEaXSOxiPujBWpK"/>
+                  LinkedIn
+                </AnimatedButton>
+              </a>
+              <a 
+                href="https://github.com/H4D35-401" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <AnimatedButton variant="secondary" dataSpecId="github-btn" data-spec-id="QUg7q518BjGxUatL">
+                  <Github size={20} data-spec-id="KcGL6bnwyR1J1KVy"/>
+                  GitHub
+                </AnimatedButton>
+              </a>
             </motion.div>
 
             <motion.div data-spec-id="contact-footer" className="text-gray-500 text-sm" initial={{
@@ -369,7 +390,7 @@ const Index = ()=>{
     }} viewport={{
         once: true
     }}>
-              <p data-spec-id="HHbnbtkHI3CUFoct">© 2024 Retro Design Studio. Crafted with nostalgia and modern technology.</p>
+              <p data-spec-id="HHbnbtkHI3CUFoct">© 2025 MIT. Crafted with nostalgia and modern technology.</p>
             </motion.div>
           </div>
         </ParallaxSection>
