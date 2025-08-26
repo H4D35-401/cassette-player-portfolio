@@ -7,7 +7,7 @@ A retro-styled portfolio site featuring a liquid-glass navbar, animated gradient
 
 ## ✨ Features
 - Liquid glass navbar with smooth scroll and mobile menu
-- Darkmode
+- Darkmode & Lightmode with animated button 
 - Animated typing of the name with gradient text and custom blinking cursor
 - Cassette Player component with real audio playback
   - Play/Pause, Next/Previous, volume and mute
