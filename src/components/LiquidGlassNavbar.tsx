@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import TextType from './TextType';
 const LiquidGlassNavbar = ()=>{
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -56,8 +57,18 @@ const LiquidGlassNavbar = ()=>{
         stiffness: 400,
         damping: 17
     }}>
-            <div className="text-2xl font-bold bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent" data-spec-id="ibxjHLpq7LDyWZOR">
-              Aditya Nakhate
+            <div>
+
+                <TextType 
+                 text={["Aditya Nakhate"]}
+                 typingSpeed={100}
+                pauseDuration={1000}
+                showCursor={true}
+                cursorCharacter="_" 
+                cursorClassName="bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent font-extrabold text-3xl leading-none"
+                className="text-2xl font-extrabold bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent tracking-wide" data-spec-id="ibxjHLpq7LDyWZOR"
+            />
+            
             </div>
           </motion.div>
 
