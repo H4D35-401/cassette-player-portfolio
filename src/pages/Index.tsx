@@ -69,7 +69,7 @@ const Index = ()=>{
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-100 to-red-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-x-hidden transition-colors duration-300" data-spec-id="nTn4NA9jaghkVIqd">
       {}
-      <motion.div className="fixed w-4 h-4 bg-orange-500/30 dark:bg-emerald-400/60 rounded-full pointer-events-none z-40 mix-blend-multiply" animate={{
+      <motion.div className="fixed w-4 h-4 bg-orange-500/30 dark:bg-emerald-400/60 rounded-full pointer-events-none z-40 mix-blend-multiply dark:mix-blend-normal" animate={{
         x: mousePosition.x - 8,
         y: mousePosition.y - 8
     }} transition={{
