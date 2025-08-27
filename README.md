@@ -43,6 +43,10 @@ src/
     AnimatedButton.tsx
     ParallaxSection.tsx
     PortfolioCard.tsx
+    RetroNavbar.tsx
+    textype.tsx
+    texttype.css
+    Darkmodetoggle.tsx
   pages/
     Index.tsx                    # Main page
   index.css                      # Tailwind and theme layers
